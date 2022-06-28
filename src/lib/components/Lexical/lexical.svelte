@@ -7,6 +7,7 @@
   } from "lexical";
   import { onMount } from "svelte";
   import { lex } from "./lexical";
+  import "$lib/style/styles.css";
 
   let editor: HTMLElement;
   let lexCtx: string;
@@ -20,22 +21,26 @@
   });
 </script>
 
-<div contenteditable="true" bind:this={editor} />
+<div class="App">
+  <div class="editor-container">
+    <div contenteditable="true" bind:this={editor} class="editor-input" />
+  </div>
 
-<button
-  on:click={() => {
-    lex.update(() => {
-      const root = _getRoot();
-      const selection = _getSelection();
-      const paragraphNode = _createParagraphNode();
-      const textNode = _createTextNode("Hello");
-      paragraphNode.append(textNode);
-      root.append(paragraphNode);
-    });
-  }}>Init</button
->
-<div>
-  <p>{lexCtx}</p>
+  <button
+    on:click={() => {
+      lex.update(() => {
+        const root = _getRoot();
+        const selection = _getSelection();
+        const paragraphNode = _createParagraphNode();
+        const textNode = _createTextNode("Hello");
+        paragraphNode.append(textNode);
+        root.append(paragraphNode);
+      });
+    }}>Init</button
+  >
+  <div>
+    <p>{lexCtx}</p>
+  </div>
 </div>
 
 <style>
