@@ -2,13 +2,19 @@
   import { getLexicalComposerContext } from "$lib/Lexical/LexicalComposerContext";
   import { registerPlainText } from "@lexical/plain-text";
   import { getCanShowPlaceholder } from "$lib/shared/useCanShowPlaceholder";
+  import { getDecorators } from "$lib/shared/useDecorators";
   import { onMount } from "svelte";
-  import { mergeRegister } from "@lexical/utils";
 
   const [editor] = getLexicalComposerContext();
 
   let showPlaceholder: boolean = getCanShowPlaceholder(editor, (stat) => {
     showPlaceholder = stat;
+  });
+
+  // Decorator not fully supported, as limited resource available
+  // and not required for now.
+  let decorators = getDecorators(editor, (decs) => {
+    decorators = decs;
   });
 
   onMount(() => {
@@ -23,5 +29,3 @@
 {#if showPlaceholder}
   <slot name="placeholder" />
 {/if}
-
-{showPlaceholder}
