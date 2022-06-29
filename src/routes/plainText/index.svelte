@@ -4,6 +4,8 @@
   import PlainTextPlugin from "$lib/Lexical/LexicalPlainTextPlugin.svelte";
   import OnChangePlugin from "$lib/Lexical/LexicalOnChangePlugin";
   import HistoryPlugin from "$lib/Lexical/LexicalHistoryPlugin";
+
+  import TreeViewPlugin from "./_plugins/TreeViewPlugin.svelte";
   import theme from "./_styles/ExampleTheme";
   import { onChange } from "./_onChange";
 
@@ -30,6 +32,7 @@
       <!-- <OnChangePlugin {onChange} /> -->
       <!-- {OnChangePlugin({ onChange })} -->
       {HistoryPlugin({})}
+      <TreeViewPlugin />
     </div>
   </LexicalComposer>
 </div>
