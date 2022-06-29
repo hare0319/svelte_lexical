@@ -13,8 +13,8 @@
   import ContentEditable from "$lib/Lexical/LexicalContentEditable.svelte";
   import HistoryPlugin from "$lib/Lexical/LexicalHistoryPlugin";
 
-  import ExampleTheme from "./styles/ExampleTheme";
-  import "./styles/style.css";
+  import ExampleTheme from "./_styles/ExampleTheme";
+  import "./_styles/style.css";
 
   const editorConfig: InitialConfigType = {
     namespace: "MyRichEditor",
@@ -50,6 +50,7 @@
             Enter some rich text...
           </div>
         </RichTextPlugin>
+        {HistoryPlugin({})}
       </div>
     </div>
   </LexicalComposer>

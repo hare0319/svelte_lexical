@@ -4,10 +4,10 @@
   import PlainTextPlugin from "$lib/Lexical/LexicalPlainTextPlugin.svelte";
   import OnChangePlugin from "$lib/Lexical/LexicalOnChangePlugin";
   import HistoryPlugin from "$lib/Lexical/LexicalHistoryPlugin";
-  import theme from "./styles/ExampleTheme";
+  import theme from "./_styles/ExampleTheme";
   import { onChange } from "./_onChange";
 
-  import "./styles/styles.css";
+  import "./_styles/styles.css";
 
   const initialConfig = {
     namespace: "MyEditor",
