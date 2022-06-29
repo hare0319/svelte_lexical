@@ -3,11 +3,11 @@ import type {
   LexicalEditor,
   LexicalNode,
   EditorThemeClasses,
+  Klass,
 } from "lexical";
 
 import { $getRoot as _getRoot, createEditor } from "lexical";
 
-import type { Klass } from "$lib/shared/types";
 import {
   createLexicalComposerContext,
   type LexicalComposerContextType,
