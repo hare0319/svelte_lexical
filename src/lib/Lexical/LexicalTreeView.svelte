@@ -74,9 +74,6 @@
 </script>
 
 <div class={viewClassName}>
-  {isPlaying}
-  {totalEditorStates}
-  {playingIndexRef}
   {#if !timeTravelEnabled && totalEditorStates > 2}
     <button
       on:click={() => {
