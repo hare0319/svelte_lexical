@@ -18,6 +18,9 @@
       <li class:active={$page.url.pathname === "/richText"}>
         <a href="/richText">Rich</a>
       </li>
+      <li class:active={$page.url.pathname === "/Lex"}>
+        <a href="/Lex">Lex</a>
+      </li>
     </ul>
     <svg viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
