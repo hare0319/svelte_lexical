@@ -4,10 +4,10 @@
   import PlainTextPlugin from "$lib/Lexical/LexicalPlainTextPlugin.svelte";
   import OnChangePlugin from "$lib/Lexical/LexicalOnChangePlugin";
   import HistoryPlugin from "$lib/Lexical/LexicalHistoryPlugin";
-  import theme from "$lib/style/_theme/ExampleTheme";
+  import theme from "./styles/ExampleTheme";
   import { onChange } from "./_onChange";
 
-  import "$lib/style/styles.css";
+  import "./styles/styles.css";
 
   const initialConfig = {
     namespace: "MyEditor",
@@ -28,7 +28,7 @@
         </div>
       </PlainTextPlugin>
       <!-- <OnChangePlugin {onChange} /> -->
-      {OnChangePlugin({ onChange })}
+      <!-- {OnChangePlugin({ onChange })} -->
       {HistoryPlugin({})}
     </div>
   </LexicalComposer>
