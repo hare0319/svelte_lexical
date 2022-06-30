@@ -5,7 +5,7 @@
   import OnChangePlugin from "$lib/Lexical/LexicalOnChangePlugin";
   import HistoryPlugin from "$lib/Lexical/LexicalHistoryPlugin";
 
-  import TreeViewPlugin from "./_plugins/TreeViewPlugin.svelte";
+  import TreeViewPlugin from "$lib/components/TreeViewPlugin.svelte";
   import theme from "./_styles/ExampleTheme";
   import { onChange } from "./_onChange";
 
